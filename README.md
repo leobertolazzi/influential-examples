@@ -16,13 +16,13 @@ The evaluations are performed on two standard datasets: [FashionMNIST](https://g
 
 One of the three models is trained on one of the two dataset and the `TracInCP` algorithm is used to show influential training examples on one randomly sampled test image.
 
-The following is an example result training the MLP on FashionMNIST:
+The following is an example result training the CNN on FashionMNIST:
 
-![](results/fashion-mnist/sample_influence_mlp.png)
+![](results/fashion-mnist/sample_influence_cnn.png)
 
 *Proponents* are influential examples that "help" the model predict the right class, whereas *Opponents* are influential examples that "favor" wrong predictions.
 
-In the result image, images of class *ankle boot* that are somehow similar to the test image are *Proponents*. Instead, images of a wrong class (*sneaker* and *sandal*) that are somehow similar to the test image are *Opponents*.
+In the result image, images of class *sneaker* that are somehow similar to the test image are *Proponents*. Instead, images of a wrong class (*sandal*) that are somehow similar to the test image are *Opponents*.
 
 ### 2. Self-influence evaluation
 
