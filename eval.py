@@ -167,7 +167,8 @@ class Evaluation():
             show_training=False
         )
 
-        model = self.reinitialize_model(model_type)
+        model = model.to('cpu')
+        model.eval()
 
         noisy_examples_percentage = self.percentage_noisy_influential_examples(
                 model, 
@@ -403,10 +404,13 @@ class Evaluation():
             )
         else:
             checkpoints_dir = glob.glob(os.path.join(checkpoints_dir, "*.pt"))
+            last_checkpoint = sorted(checkpoints_dir)[-1]
+            model.load_state_dict(torch.load(last_checkpoint)['model_state_dict'])
 
         test_examples_indices = np.random.choice(len(self.test_data), size=1, replace=False)
 
-        model = self.reinitialize_model(model_type)
+        model = model.to('cpu')
+        model.eval()
 
         test_examples_features, test_examples_predicted_probs, test_examples_predicted_labels, test_examples_true_labels = self.process_test_examples(
             model,
@@ -461,7 +465,8 @@ class Evaluation():
             save_every=self.save_every
         )
 
-        model = self.reinitialize_model(model_type)
+        model = model.to('cpu')
+        model.eval()
         
         self_influence = self.compute_self_influence(
             model,

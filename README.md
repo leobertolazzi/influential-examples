@@ -22,7 +22,7 @@ The following is an example result training the CNN on FashionMNIST:
 
 *Proponents* are influential examples that "help" the model predict the right class, whereas *Opponents* are influential examples that "favor" wrong predictions.
 
-In the result image, images of class *sneaker* that are somehow similar to the test image are *Proponents*. Instead, images of a wrong class (*sandal*) that are somehow similar to the test image are *Opponents*.
+In the result image, images of class *ankle boot* that are somehow similar to the test image are *Proponents*. Instead, images of a wrong class (*sneaker*) that are somehow similar to the test image are *Opponents*.
 
 ### 2. Self-influence evaluation
 
