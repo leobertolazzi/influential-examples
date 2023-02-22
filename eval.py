@@ -346,7 +346,7 @@ class Evaluation():
         ax.set_xlabel("FPR (proportion of correctly-labelled examples examined)", fontsize=fontsize)
         ax.set_title(f"ROC curve - {model_type.upper()}" + "\n" + f"AUC score: {auc_score:.3f}")
         path = os.path.join('results', self.dataset_type, f'roc_{model_type}')
-        plt.savefig(path, dpi=800)
+        plt.savefig(path, dpi=200)
         plt.show()
 
     def display_label_noise(
@@ -375,7 +375,7 @@ class Evaluation():
         plt.ylabel("Percentage of noisy influential examples")
         plt.title(f"Model: {self.model_type.upper()}" + "\n" + "Noisy influential examples vs. amount of noise in training data")
         path = os.path.join('results', self.dataset_type, f'label_noise_{self.model_type}.png')
-        plt.savefig(path, dpi=800)
+        plt.savefig(path, dpi=200)
         plt.show()
 
     def sample_influence(
