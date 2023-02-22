@@ -4,7 +4,7 @@
 
 Explainable AI can be defined as the set of methods that enable human users to understand and trust the results and outputs created by machine learning algorithms. In this context, there is a class of algorithms that aims to explain model decisions in terms of the data on which the models have been trained. This type of explanation can be called *example-level explanation*, and the training examples that influence a given decision are called *influential examples*.
 
-In this repo, I perform a series of evaluation on an *influential examples* algorithm called [`TracInCP`](https://arxiv.org/abs/2002.08484), implemented in the [Captum](https://captum.ai/) library for PyTorch.
+In this repo, I perform a series of evaluation on an *influential examples* algorithm called `TracInCP`, implemented in the [Captum](https://captum.ai/) library for PyTorch.
 
 Three models are evaluated: a logistic regression, a multilayer perceptron, and a convolutional neural network. They can be found in `models.py`.
 
@@ -50,7 +50,7 @@ The previous evaluation shows that mislabeled examples are highly influential fo
 
 The evaluation follows these steps:
 
-1. Artificially mislabel a fraction of examples from the training set, i.e. 5%, to create a noisy training set.
+1. Artificially mislabel a fraction of examples from the training set to create a noisy training set.
 
 2. Train a model on the noisy training set.
 
@@ -58,7 +58,7 @@ The evaluation follows these steps:
 
 4. Compute the average percentage across the test set
 
-5. Repeat 1-4 for incrasing fractions of mislabeled examples. Here I used 5%, 10% and 20%.
+5. Repeat 1-4 for incrasing fractions of mislabeled examples. Here I use 5%, 10% and 20%.
 
 The following are the average percentages of mislabeled influential examples for the CNN trained on CIFAR-10:
 
@@ -94,4 +94,4 @@ where:
 
 ## Results
 
-The results for evaluation 2. and 3. are available in the folder `results`. Since evaluation 1. is qualitative, only examples for the MLP are available.
+The results for evaluation 2. and 3. are available in the folder `results`. Since evaluation 1. is qualitative, only examples for the CNN are available.
