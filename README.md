@@ -79,7 +79,7 @@ $ pip install -r requirements.txt
 In order to perform an evaluation, run:
 
 ```
-$ python --dataset <DATASET> --model_type <MODEL_TYPE> --eval_type <EVAL_TYPE> --device <DEVICE>
+$ python eval.py --dataset <DATASET> --model_type <MODEL_TYPE> --eval_type <EVAL_TYPE> --device <DEVICE>
 ```
 
 where:
