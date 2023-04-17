@@ -84,13 +84,13 @@ $ python eval.py --dataset <DATASET> --model_type <MODEL_TYPE> --eval_type <EVAL
 
 where:
 
-<DATASET> : {fashion-mnist, cifar10}
+`<DATASET>` : {fashion-mnist, cifar10}
 
-<MODEL_TYPE> : {lr, mlp, cnn}
+`<MODEL_TYPE>` : {lr, mlp, cnn}
 
-<EVAL_TYPE> : {sample_influence, self_influence, label_noise}
+`<EVAL_TYPE>` : {sample_influence, self_influence, label_noise}
 
-<DEVICE> : {cuda, cpu, mps}
+`<DEVICE>` : {cuda, cpu, mps}
 
 ## Results
 
